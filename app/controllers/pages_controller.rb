@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
-  def welcome
+  def contact
+  end
+
+  def about
   end
 end
