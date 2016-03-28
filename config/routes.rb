@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'pages/welcome'
-
+  devise_for :users
   root 'pages#welcome'
 
   # The priority is based upon order of creation: first created -> highest priority.
