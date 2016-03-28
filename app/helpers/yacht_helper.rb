@@ -1,0 +1,2 @@
+module YachtHelper
+end
