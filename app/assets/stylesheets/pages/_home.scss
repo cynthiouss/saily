@@ -6,7 +6,7 @@
 .banner {
   text-align: center;
   height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */ 
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
@@ -27,8 +27,8 @@
 
 // Search Criteria style
 
-search-criteria {
-	color: black;  
+.search-criteria {
+	color: black;
 }
 
 select {
@@ -37,4 +37,43 @@ select {
 
 button {
   background: #0398B8;
+}
+
+// Welcome body
+
+
+.middleup {
+ text-align: center;
+ background: url(https://wallpaperscraft.com/image/yacht_palm_tree_blue_water_inclination_46698_3840x2400.jpg) no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ color: white;
+ padding: 30px 30px;
+}
+
+.middledown {
+ text-align: center;
+ color: black;
+ padding: 30px 30px;
+}
+
+
+.fiche {
+ display: inline-block;
+ padding: 0px 100px;
+ width: 200px;
+}
+
+.space {
+ padding: 20px;
+}
+
+.lescartes {
+padding: 0px 50px;
+}
+
+.thumbnail img {
+ height: 242px;
 }
