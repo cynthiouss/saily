@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'pages#welcome'
   get '/contact', to: 'pages#contact'
+  get '/about', to: 'pages#about'
 
   devise_for :users
 
