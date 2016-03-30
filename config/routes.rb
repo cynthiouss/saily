@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   root 'pages#welcome'
   get '/contact', to: 'pages#contact'
+
   get '/yachts', to: 'yachts#index'
+
+  get '/about', to: 'pages#about'
+
 
   devise_for :users
 

@@ -17,6 +17,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'faker'
 gem 'autoprefixer-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

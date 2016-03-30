@@ -1,7 +1,11 @@
-class BookingController < ApplicationController
+class BookingsController < ApplicationController
   before_action :find_booking, only: [:show, :edit, :destroy]
 
   def index
+    @bookings = Booking.all
+  end
+
+  def search
     @bookings = Booking.all
   end
 
