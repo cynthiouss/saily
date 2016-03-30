@@ -3,5 +3,7 @@ class Yacht < ActiveRecord::Base
   has_many :bookings
 
   validates :capacity, numericality: { only_integer: true }
+
+  mount_uploader :photo, PhotoUploader
 end
 
