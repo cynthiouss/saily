@@ -4,5 +4,12 @@ class Country < ActiveRecord::Base
 
   validates :name, uniqueness: true, exclusion: { in: [nil] }
 
-  NAMES = ['Spain', 'Italy', 'France']
+  def self.names
+    names = ["Select a country"]
+    Country.all.each do |c|
+      names<<c.name
+    end
+    names
+  end
+
 end
