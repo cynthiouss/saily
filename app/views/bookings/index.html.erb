@@ -1,0 +1,8 @@
+<h1>Booking#index</h1>
+<p>Find me in app/views/booking/index.html.erb</p>
+
+<% @bookings.each do |r| %>
+  <p><%= link_to r.days, booking_path(r) %></p>
+  <p><%= link_to r.user.email, booking_path(r) %></p>
+  <p><%= link_to r.yacht.cost_per_day, booking_path(r) %></p>
+<% end %>
