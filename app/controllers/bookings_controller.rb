@@ -5,9 +5,6 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  def search
-    @bookings = Booking.all
-  end
 
   def new
     @booking = Booking.new
