@@ -18,19 +18,19 @@ p "#{Country.count} countries created"
 
 
 islands = Island.create([
-  { name: 'Mykonos', country_id: 1 },
-  { name: 'Kea', country_id: 1 },
-  { name: 'Kythnos', country_id: 1 },
-  { name: 'Milos', country_id: 1 },
-  { name: 'Sifnos', country_id: 1 },
-  { name: 'Serifos', country_id: 1 },
-  { name: 'Santorini', country_id: 1 },
-  { name: 'Ibiza', country_id: 2 },
-  { name: 'Mallorca', country_id: 2 },
-  { name: 'Costa Brava', country_id: 2 },
-  { name: 'Dubrovnik', country_id: 3 },
-  { name: 'Brac', country_id: 3 },
-  { name: 'Mljet', country_id: 3 }
+  { name: 'Mykonos', country_id: 7 },
+  { name: 'Kea', country_id: 7 },
+  { name: 'Kythnos', country_id: 7 },
+  { name: 'Milos', country_id: 7 },
+  { name: 'Sifnos', country_id: 7 },
+  { name: 'Serifos', country_id: 7 },
+  { name: 'Santorini', country_id: 7 },
+  { name: 'Ibiza', country_id: 8 },
+  { name: 'Mallorca', country_id: 8 },
+  { name: 'Costa Brava', country_id: 8 },
+  { name: 'Dubrovnik', country_id: 9 },
+  { name: 'Brac', country_id: 9 },
+  { name: 'Mljet', country_id: 9 }
 ])
 
 p "#{Island.count} islands created"
@@ -40,7 +40,9 @@ p "#{Island.count} islands created"
     name: Faker::Name.first_name,
     capacity: Faker::Number.between(6, 10),
     cost_per_day: Faker::Number.between(200, 1000),
-    country_id: countries.sample
+    country_id: countries.sample.id,
+    # photo: 'http://unsplash.it/500x500'
+    duration: Faker::Number.between(3, 10)
     )
 end
 p "#{Yacht.count} yachts created"
@@ -62,7 +64,6 @@ users = User.all
 
 10.times do
   Booking.create(
-    days: Faker::Number.between(1, 10),
 
     user_id: users.sample.id,
     yacht_id: yachts.sample.id

@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   def about
   end
 
-  def results
+  def welcome
+    @countries = Country.all
+    @yachts = Yacht.all
   end
+
 end

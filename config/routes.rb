@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/yachts', to: 'yachts#index'
 
-  get '/results', to: 'pages#results'
+  get '/search', to: 'yachts#search'
 
   get '/about', to: 'pages#about'
 
