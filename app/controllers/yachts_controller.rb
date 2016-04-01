@@ -5,7 +5,7 @@ class YachtsController < ApplicationController
 
   def search
     @country = Country.find_by(name: params[:country])
-    @yachts = Yacht.find_by(country_id: @country.id)
+    @yachts = Yacht.where(country_id: @country.id)
   end
 
   private
