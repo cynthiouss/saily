@@ -9,16 +9,26 @@
       </div>
 
       <div class="col-xs-6 right text-right">
-        <!-- Login button -->
-        <!-- Button trigger modal -->
+        <!-- Sign in button -->
 
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="navbar-saily-button" data-toggle="modal" data-target="#SigninModal">Sign in</button>
-        <button type="button" class="navbar-saily-button" id="signupbtn" data-toggle="modal" data-target="#SignupModal">Sign up</button>
+        <%= link_to "Sign in", 'users/sign_in', class: 'navbar-saily-item navbar-saily-button btn' %>
+
+        <!-- Sign up -->
+
+        <%= link_to "Sign up", 'users/sign_up', class: 'navbar-saily-item navbar-saily-button btn', id: 'signupbtn' %>
+
+        <!-- Button (call-to-action) -->
+
+        <%= link_to t(".top_call_to_action", default: "Contact us"), "contact", class: "navbar-saily-item navbar-saily-button btn" %>
+
+      </div>
+    </div>
+  </div>
+</div>
 
         <!-- Modal -->
         <!-- SigninModal -->
-          <div class="modal fade" id="SigninModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <!-- <div class="modal fade" id="SigninModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -36,10 +46,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
         <!-- SignupModal -->
-        <div class="modal fade" id="SignupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <!-- <div class="modal fade" id="SignupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -55,13 +65,4 @@
                 </div>
               </div>
             </div>
-          </div>
-
-        <!-- Button (call-to-action) -->
-
-        <%= link_to t(".top_call_to_action", default: "Contact us"), "contact", class: "navbar-saily-item navbar-saily-button btn" %>
-
-      </div>
-    </div>
-  </div>
-</div>
+          </div> -->
