@@ -4,17 +4,16 @@ Rails.application.routes.draw do
 
   root 'pages#welcome'
 
+  get '/about', to: 'pages#about'
+
   get '/contact', to: 'pages#contact'
 
   get '/yachts', to: 'yachts#index'
 
   get '/search', to: 'yachts#search'
 
-  get '/about', to: 'pages#about'
-
-
-  resources :bookings do
-    resources :yachts
+  resources :yachts do
+    resources :bookings
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
