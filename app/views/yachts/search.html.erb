@@ -1,74 +1,33 @@
-
-<div class="all-form">
- <h5 class="text-center top-form">Criterias</h5>
- <div class="form">
-   <h6>Location</h6>
-   <input type="text" class="form-control" placeholder="Country">
-   <h6>Price Range</h6>
-   <input type="text" class="form-control" placeholder="Min €">
-   <input type="text" class="form-control" placeholder="Max €">
-   <h6>Number of people</h6>
-   <div class="dropdown">
-     <button class="btn btn-default dropdown-toggle size" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">People
-       <span class="caret"></span>
-     </button>
-     <ul class="dropdown-menu dropdowner" aria-labelledby="dropdownMenu1">
-       <li><a href="#">1 guest</a></li>
-       <li><a href="#">2 guest</a></li>
-       <li><a href="#">3 guest</a></li>
-       <li><a href="#">4 guest</a></li>
-       <li><a href="#">5 guest</a></li>
-       <li><a href="#">6 guest</a></li>
-       <li><a href="#">7 guest</a></li>
-       <li><a href="#">8 guest</a></li>
-       <li><a href="#">9 guest</a></li>
-       <li><a href="#">10 guest</a></li>
-       <li><a href="#">11 guest</a></li>
-       <li><a href="#">12 guest</a></li>
-       <li><a href="#">13 guest</a></li>
-       <li><a href="#">14 guest</a></li>
-       <li><a href="#">15 guest</a></li>
-       <li><a href="#">16 guest</a></li>
-       <li><a href="#">17 guest</a></li>
-       <li><a href="#">18 guest</a></li>
-       <li><a href="#">19 guest</a></li>
-       <li><a href="#">20 guest</a></li>
-     </ul>
-     <li role="separator" class="divider"></li>
-     <li><a href='#'>UP</a></li>
-   </div>
-   <h6>Dates</h6>
-   <input type="date" class="form-control" placeholder="Check in">
-   <input type="date" class="form-control" placeholder="Check in">
-   <div class="search-reset">
-     <br><button type="submit" class="btn btn-primary">Search</button>
-     <button type="submit" class="btn btn-primary">Reset</button>
-   </div>
- </div>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://res.cloudinary.com/cynthiouss/image/upload/v1459349235/yacht_7.png');">
+  <div class="banner-content">
+    <h1>SAILY TOURS</h1>
+    <p>Browse our tours for <%= @country.name %> and choose your dream holiday!</p>
+  </div>
 </div>
+
 
 <% @yachts.each do |yacht|%>
 <div class="flexpart">
   <div class="card">
     <div class="top_card">
-      <img src="http://www.offroadme.com/file/2015/10/island-02.jpg" class="top_card_picture width-adapted">
+      <img src=<%= yacht.photo %> class="top_card_picture width-adapted">
     </div>
     <div class="bottom-card">
       <div class="container width-adapted">
         <div class="row text-center">
           <div class="col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">
-          <img src="http://www.seabreeze.com.au/img/Content/10259290/See-what-a-4-million-Boat-Designed-by-Bugatti-Looks-Like-3.jpg" class="middle_card_picture">
+          <img src=<%= yacht.tourphoto %> class="middle_card_picture">
           </div>
           <div class="general_trip_info text-center">
             <ul>
               <div class="col-xs-12 col-sm-2">
-                <li><h4><i class="fa fa-map-marker"><br><span> <%= @country.name %> </span></i></h4></li>
+                <li><h3><i class="fa fa-map-marker"><br><span> <%= @country.name %> </span></i></h3></li>
               </div>
               <div class="col-xs-12 col-sm-2">
-                <li class="padding_middle"><h4><i class="fa fa-users"><br><span> <%= yacht.capacity %> people</span></i></h4></li>
+                <li class="padding_middle"><h3><i class="fa fa-users"><br><span> <%= yacht.capacity %> people</span></i></h3></li>
               </div>
               <div class="col-xs-12 col-sm-2">
-                <li><h4><i class="fa fa-calendar"><br><span>8 days/7 nights</span></i></h4></li>
+                <li><h3><i class="fa fa-calendar"><br><span><%= yacht.duration %> days</span></i></h3></li>
               </div>
             </ul>
           </div>
@@ -76,10 +35,10 @@
       </div>
       <div class="row">
         <div class="description">
-          <p>Go travel with all your friends wherever you want whenever you want! You can now, thanks to this luxury boat, visits all the islands that are around Biatch's island. The price includes the service, the captain and 2 bottles of champain every night.</p>
+          <p>Experience the ultimate island-hopping holiday on a yacht to <%= @country.name %>’s most popular islands</p>
         </div>
         <ol>
-          <li class="text-center bouton">20.000€</li>
+          <li class="text-center bouton"><%= yacht.cost_per_day * yacht.duration %> €</li>
           <li class="text-center bouton book-buton">Book this trip</li>
         </ol>
       </div>
