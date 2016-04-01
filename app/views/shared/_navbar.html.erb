@@ -4,11 +4,13 @@
       <div class="col-xs-6 left">
         <!-- Logo -->
         <%= link_to root_path, class: "logo" do %>
-          <%= image_tag "logo.jpg" %>
+          <%= image_tag "http://res.cloudinary.com/cynthiouss/image/upload/e_blue:36/v1459517992/Saily_logo.png" %>
         <% end %>
       </div>
 
       <div class="col-xs-6 right text-right">
+
+        <%= link_to "How Saily works", './about', class: 'navbar-saily-item navbar-saily-button btn' %>
         <!-- Sign in button -->
 
         <%= link_to "Sign in", 'users/sign_in', class: 'navbar-saily-item navbar-saily-button btn' %>
