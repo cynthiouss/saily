@@ -1,8 +1,13 @@
 class PagesController < ApplicationController
-  def contact
-  end
 
   def about
+    @countries = Country.all
+    @yachts = Yacht.all
+  end
+
+  def contact
+    @countries = Country.all
+    @yachts = Yacht.all
   end
 
   def welcome
