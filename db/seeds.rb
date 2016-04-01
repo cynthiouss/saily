@@ -35,16 +35,38 @@ islands = Island.create([
 
 p "#{Island.count} islands created"
 
+photos = [
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459349229/yacht_2.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459349229/yacht_6.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459349230/yacht_3.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459349229/yacht_4.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459349230/yacht_9.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459349230/yacht_10.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459349231/yacht_1.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459349231/yacht_5.png',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459349263/yacht_8.jpg'
+]
+
+tourphotos = [
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459416187/tour_cyclades_2.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459416186/tour_cyclades_4.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459416186/tour_cyclades_8.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459416186/tour_cyclades_6.jpg',
+  'http://res.cloudinary.com/cynthiouss/image/upload/v1459416186/tour_croatia.jpg'
+]
+
 10.times do
   Yacht.create(
     name: Faker::Name.first_name,
     capacity: Faker::Number.between(6, 10),
     cost_per_day: Faker::Number.between(200, 1000),
     country_id: countries.sample.id,
-    # photo: 'http://unsplash.it/500x500'
+    photo: photos.shuffle.sample,
+    tourphoto: tourphotos.shuffle.sample,
     duration: Faker::Number.between(3, 10)
     )
 end
+
 p "#{Yacht.count} yachts created"
 
 yachts = Yacht.all
