@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   root 'pages#welcome'
 
   get '/contact', to: 'pages#contact'
@@ -10,8 +12,6 @@ Rails.application.routes.draw do
 
   get '/about', to: 'pages#about'
 
-
-  devise_for :users
 
   resources :bookings do
     resources :yachts
