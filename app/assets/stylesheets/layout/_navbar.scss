@@ -15,8 +15,7 @@
 }
 
 .right {
-  padding-top: 12px;
-  margin-right: 0px;
+  padding-top: 20px;
 }
 
 /* Optional class to fix the navbar on top */
@@ -77,4 +76,15 @@
 
 .modal-title {
   text-align: left;
+}
+
+#navbarfixed {
+  position: relative;
+  position: fixed;
+  top:0px;
+  width:100%;
+}
+
+body {
+  padding-top: 50px;
 }

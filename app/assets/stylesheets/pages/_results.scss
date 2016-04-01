@@ -1,3 +1,56 @@
+
+.all-form {
+ position: fixed;
+ border: 3px solid #2381D0 ;
+ border-left: none;
+ border-top-right-radius: 5px;
+ border-bottom-right-radius: 5px;
+}
+
+.dropdowner{
+ height: 300px;
+ overflow-x: hidden;
+}
+
+.size {
+ width: 100%;
+}
+
+.form {
+ background-color: white;
+ width: 200px;
+ padding: 0px 10px 10px 10px;
+ // border: 2px solid blue;
+ // position: fixed;
+}
+
+.top-form {
+ width: 200px;
+ height: 100%;
+ background-color: #2381D0 ;
+ color: white;
+ padding: 10px;
+ // border-top-right-radius: 5px;
+}
+
+.form-control {
+ width: 20%;
+}
+
+.bouton-search {
+ padding: 6px 12px;
+ border-radius: 5px;
+ color: white;
+ background-color: #06AED5 ;
+ height: 36px;
+ width: 132px;
+ font-size: 16px;
+}
+
+.search-reset {
+ text-align: center;
+}
+
 .flexpart {
   display: flex;
   justify-content: center;
